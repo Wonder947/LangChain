@@ -1,0 +1,26 @@
+Goal:
+Using LangChain build an amusing chat AI based on ChatGpt.
+Particularly,
+    1. properly construct a prompt template for llm, using dynamic prompt template
+    2. choose ConversationSummaryBufferMemory as chatbot memory
+    3. design a user iterface for interacting with the chabot
+    4. (more)...
+
+
+
+20230529
+some changes:
+	1. start with a LLM to decide which Langchain to use, including
+		a) amusing Q&A	temperature>1, properly set prompt template, using examples
+		b) serious chatbot	temperature=0, properly set prompt template
+		c) wiki search bot	implemented with wiki database
+		d) academic bot	implemented with citations
+
+	after reading chap5 about agents, step1 can actually be done with agents!!!
+
+	2. construct database for some specific LLM
+	3. user can start over
+	4. use sequential chains
+
+note: advice: rewrite and considering Agents!!!
+

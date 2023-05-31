@@ -1,0 +1,94 @@
+for learning LangChain
+
+https://github.com/pinecone-io/examples/blob/master/generation/langchain/handbook/02-langchain-chains.ipynb
+
+1. utility chains and generic chains
+
+
+https://www.pinecone.io/learn/langchain-prompt-templates/
+
+
+1. prompt
+    usually includes the following components:
+        1. instructions
+        2. external information
+        3. user input (or query)
+        4. output indicator
+
+
+4. fixing Hallucination with Knowledge Bases
+	1. retrieval augmentation
+	2. create knowledge base
+		1) start with a data set
+		2) split our texts into smaller chunks, using text splitter
+		    to create chunks we need measure the length of our text, by counting tokens
+		3) With our token counting function ready, we can initialize a LangChain RecursiveCharacterTextSplitter object.
+		    This object will allow us to split our text into chunks no longer than what we specify via the chunk_size parameter.
+	3. create vector embeddings
+		(We take the chunks of text we’d like to store in our knowledge base and encode each chunk into a vector embedding.)
+		1) initialize the embedding model
+		2) use it to embed our chunks from the texts
+	4. create vector database
+		1) initialize with Pinecone vector database
+		2) add vectors into it
+	4B. create vector database with LangChain
+
+	5. Generative Question Answering (GQA)	i.e. use it
+		In generative question-answering (GQA), we pass our question to the LLM but instruct it to base the answer on the information returned from our knowledge base. We can do 		this in LangChain easily using the RetrievalQA chain.
+	6. more to improve accuracy
+		one way is to include citations
+
+5. Conversational Agents
+	to use agents, three requirements:
+		a) a base LLM  b) a tool that we will be interacting with  c) an agent to control the interaction
+	1. first, initialize our base LLM 
+	2. then, initialize our tool, which is a utility chain, consisting of a tool name and description
+	3. with base LLM and Tools, we can initialize an agent
+	  note: base LLM could be different from the LLM_tool
+	  note: we can use "zero-shot-react-description" agent	(it has no memeory)
+common examples of agents:
+	1. "zero-shot-react-description" agent		with no memory
+	2. "conversational-react-description" agent	with conversational memory
+	3. "react-docstore" agent		with search and look up
+	4. "self-ask-with-search" agent 
+
+6. building custom tools for LLM agents
+	examples:
+	1. simple calculator tool
+
+	tool consisting of name, description, and function
+	tool can be an object class with fields of name, description, _run( )
+	we can rewrite the agent's prompt to make it more accurate  e.g. ask it to not do math by itself
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

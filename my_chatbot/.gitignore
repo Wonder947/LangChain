@@ -1,0 +1,4 @@
+#.gitignore
+#include files that should not be pushed to github
+
+config.py
