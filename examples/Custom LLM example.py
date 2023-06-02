@@ -1,13 +1,10 @@
 # from https://python.langchain.com/en/latest/modules/models/llms/examples/custom_llm.html
 
-# This notebook goes over how to create a custom LLM wrapper, in case you want to use your own LLM or a different wrapper than one that is supported in LangChain.
-#
+
 # There is only one required thing that a custom LLM needs to implement:
-#
 # A _call method that takes in a string, some optional stop words, and returns a string
 #
 # There is a second optional thing it can implement:
-#
 # An _identifying_params property that is used to help with printing of this class. Should return a dictionary.
 
 
