@@ -62,10 +62,16 @@ common examples of agents:
 
 
 
+20230601
+https://python.langchain.com/en/latest/modules/models.html
+different models in LangChain:
+    1. LLMs: (Large Language Models) input: a text string, output: a text string
+    2. Chat Models: "These models are usually backed by a language model,
+                 but their APIs are more structured. Specifically,
+                 these models take a list of Chat Messages as input, and return a Chat Message."
+    3. Text Embedding Models: input: text, output: a list of floats
 
-
-
-
+    (both 1 & 2 are called Language Model)
 
 
 
